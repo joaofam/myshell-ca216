@@ -16,11 +16,11 @@ void exec(char **args)
     else if(!strcmp(args[0],"clr"))
     {
         system("clear");
-    } /*
+    }
     else if(!strcmp(args[0],"dir"))
     {
         dir(args);
-    } */
+    }
     else if(!strcmp(args[0],"env"))
     {
         env(args);
