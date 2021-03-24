@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "lineread.h"
 #include "parse.h"
+#include "exec.h"
 
 int main(int argc, char **argv)
 {
@@ -13,10 +14,6 @@ int main(int argc, char **argv)
         printf("$ ");
         line = line_read();
         args = parse(line);
-        for (int i = 0; args[i] != NULL; i++)
-        {
-            printf("%s\n", args[i]);
-        }
-        
+        exec(args);
     } while(true);
 }
