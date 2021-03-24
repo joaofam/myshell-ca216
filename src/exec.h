@@ -9,10 +9,10 @@ void exec(char **args)
     {
         return;
     }
-    /*else if(!strcmp(args[0],"cd"))
+    else if(!strcmp(args[0],"cd"))
     {
         cd(args);
-    } */
+    }
     else if(!strcmp(args[0],"clr"))
     {
         system("clear");
