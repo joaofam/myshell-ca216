@@ -28,15 +28,15 @@ void exec(char **args)
     else if(!strcmp(args[0],"echo"))
     {
         echo(args);
-    }
+    } */
     else if(!strcmp(args[0],"help"))
     {
         help(args);
-    }
+    } /*
     else if(!strcmp(args[0],"pause"))
     {
         pause(args);
-    }*/
+    } */
     else if(!strcmp(args[0],"quit"))
     {
         quit(args);
