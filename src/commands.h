@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void echo(char **args)
+{
+    if(args[1] == NULL)
+    {
+        printf("\n");
+    }
+    else
+    {
+        for(int i = 1; i < args[i]; i++)
+        {
+            printf("%s ", args[i]);
+        }
+        printf("\n");
+    }   
+}
+
 void help(char **args)
 {
     printf("----Need a hand?----\n");

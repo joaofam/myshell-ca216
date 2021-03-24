@@ -24,11 +24,11 @@ void exec(char **args)
     else if(!strcmp(args[0],"env"))
     {
         env(args);
-    }
+    } */
     else if(!strcmp(args[0],"echo"))
     {
         echo(args);
-    } */
+    }
     else if(!strcmp(args[0],"help"))
     {
         help(args);
