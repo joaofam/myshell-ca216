@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void env(char **args)
+{
+    extern char **environ;
+    for(int i=0; environ[i] != NULL; i++)
+        printf("%s\n",environ[i]);
+    return(0);
+}
+
 void echo(char **args)
 {
     if(args[1] == NULL)
