@@ -9,7 +9,7 @@ void echo(char **args)
     }
     else
     {
-        for(int i = 1; i < args[i]; i++)
+        for(int i=1; args[i]; i++)
         {
             printf("%s ", args[i]);
         }
@@ -19,8 +19,8 @@ void echo(char **args)
 
 void help(char **args)
 {
-    printf("----Need a hand?----\n");
-    printf("Here is a list of commands you can use:"
+    printf("-------------Need a hand?-------------\n");
+    printf("Here is a list of commands you can use:\n"
     "\n$cd"
     "\n$clr"
     "\n$dir"
@@ -29,7 +29,7 @@ void help(char **args)
     "\n$help"
     "\n$pause"
     "\n$quit"
-    "\n");
+    "\n\n");
 }
 
 void quit(char **args)
