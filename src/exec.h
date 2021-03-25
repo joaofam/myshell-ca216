@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "commands.h"
+#include "execute_command.h"
 
 void exec(char **args)
 {
@@ -32,13 +33,17 @@ void exec(char **args)
     else if(!strcmp(args[0],"help"))
     {
         help(args);
-    } /*
+    }
     else if(!strcmp(args[0],"pause"))
     {
-        pause(args);
-    } */
+        pause1(args);
+    }
     else if(!strcmp(args[0],"quit"))
     {
         quit(args);
+    }
+    else
+    {
+        execute(args);
     }
 }

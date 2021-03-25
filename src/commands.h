@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
 
 void cd(char **args)
 {
@@ -76,6 +78,13 @@ void help(char **args)
     "\n$pause"
     "\n$quit"
     "\n\n");
+}
+
+void pause1()
+{
+    printf ("Press enter to continue");
+    while ('\n' != getchar());
+    getchar ();
 }
 
 void quit(char **args)
