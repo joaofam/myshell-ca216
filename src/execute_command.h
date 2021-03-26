@@ -1,21 +1,23 @@
+#include <wait.h>
 
+/* function to execute internal commands */
 void execute(char **args)
 {
     pid_t pid;
-    pid = fork();
+    pid = fork(); /* fork */
 
     if(pid == 0)
     {
         execvp(args[0], args); /* built in command */
-        /*pid_t = getpid();*/
+        /*pid_t = getpid(); (optional here) */
     }
     else if(pid < 0)
     {
-        perror("Failed Fork");
+        perror("Failed Fork"); /* print error if fork fails */
     }
     else{
         wait(NULL);
-        /* waitpid(pid, NULL, 0)*/
+        /* waitpid(pid, NULL, 0) (optional here ) */
     }
 }
 
