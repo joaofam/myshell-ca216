@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
+#include <math.h>
 
 void cd(char **args)
 {
@@ -72,7 +73,7 @@ void help(char **args)
     "\n$cd"
     "\n$clr"
     "\n$dir"
-    "\n$env"
+    "\n$environ"
     "\n$echo"
     "\n$help"
     "\n$pause"
@@ -92,3 +93,29 @@ void quit(char **args)
     printf("Exiting\n");
     exit(EXIT_SUCCESS);
 }
+
+void cowsay(char **args)
+{
+    char *str;
+    if (args[1] == NULL) {
+        str = "moOh";
+    }
+    else {
+        str = args[1];
+    }
+    int len = strlen(str);
+    char top[len+1];
+    memset(top, '_', len);
+    top[len] = '\0';
+    char bottom[len+1];
+    memset(bottom, '-', len);
+    bottom[len] = '\0';
+    printf("  %s\n< %s >\n  %s\n", top, str, bottom);
+    printf("  \\ ^__^\n");
+    printf("    (oo)\\_______\n");
+    printf("    (__)\\       )\\/\\\n");
+    printf("        ||----w |\n");
+    printf("        ||     ||\n");
+    return 1;
+}
+

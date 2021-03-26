@@ -22,7 +22,7 @@ void exec(char **args)
     {
         dir(args);
     }
-    else if(!strcmp(args[0],"env"))
+    else if(!strcmp(args[0],"environ"))
     {
         env(args);
     }
@@ -41,6 +41,10 @@ void exec(char **args)
     else if(!strcmp(args[0],"quit"))
     {
         quit(args);
+    }
+    else if(!strcmp(args[0], "cowsay"))
+    {
+        cowsay(args);
     }
     else
     {
