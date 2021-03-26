@@ -46,6 +46,10 @@ void exec(char **args)
     {
         cowsay(args);
     }
+    else if(!strcmp(args[0], "pi"))
+    {
+        pi(args);
+    }
     else
     {
         execute(args);

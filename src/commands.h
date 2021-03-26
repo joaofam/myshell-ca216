@@ -119,3 +119,8 @@ void cowsay(char **args)
     return 1;
 }
 
+void pi(char **args)
+{
+    printf("%.*f\n", atoi(args[1]), M_PI);
+    return 1;
+}
